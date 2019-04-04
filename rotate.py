@@ -1,5 +1,5 @@
-def cen_rot2 (im, rot, dim_out, offset1=(0,0), offset2=(0,0), order=2):
-    """cen_rot2 - takes a cube of images im, and a set of rotation angles in rot,
+def cen_rot (im, rot, dim_out, offset1=(0,0), offset2=(0,0), order=2):
+    """cen_rot - takes a cube of images im, and a set of rotation angles in rot,
                 and translates the middle of the frame with a size dim_out to the middle of
                 a new output frame with an additional rotation of rot.
                 """
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     ax1.imshow(t1)
 
     nx, ny = t1.shape
-    t2 = cen_rot2(t1,30,(25,29), offset1=(0.5*nx, 0.5 * ny))
+    t2 = cen_rot(t1,30,(25,29), offset1=(0.5*nx, 0.5 * ny))
     ax2.imshow(t2)
     plt.show()
     plt.draw()
